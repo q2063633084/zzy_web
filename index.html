@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+		<title>-咱厝人-这里是福建</title>
+		<meta name="Keywords" content="福建，家乡，家乡美，咱厝人，福建省">
+		<meta name="description" content="咱厝人-福建省，简称“闽”，是中华人民共和国省级行政区。省会福州，位于中国东南沿海，东北与浙江省毗邻，西北与江西省接界，西南与广东省相连，东南隔台湾海峡与台湾省相望，福建省陆地总面积12.14万平方千米。">
+		<meta name="author" content="19数媒3班-王泽威">
+		<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+		
+		<style type="text/css">
+		    /*
+			*author:19数媒3班-王泽威
+			*/
+
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";color:#666;}
+			img{border:0;}
+			/*header start*/
+			.header{width:100%;height:70px;background:#15171f;}
+			.header .h_top{width:1180px;height:70px;margin:0 auto;}
+			.header .h_top .h_logo{width:220px;padding-top:16px;float:left;}
+
+			/*h_nav start*/
+			.header .h_top .h_nav{width:650px;height:70px;float:left;color:#fff;list-style:none;}
+			.header .h_top .h_nav ul li{list-style:none;float:left;}
+			.header .h_top .h_nav ul li a{text-decoration:none;display:block;line-height:70px;padding: 0 20px 0 20px;
+				color:#fff;font-size:14px;margin:0 5px 0 5px;}
+			.header .h_top .h_nav ul li a:hover{background:#323744;}
+			/*end h_nav*/
+
+			/*h_search start*/
+			.header .h_top .h_search{width:160px;height:32px;border:1px solid #323744;background:#323744;float:left;margin-top:18px;}
+			.header .h_top .h_search:hover{border:1px solid #818997;}
+			.header .h_top .h_search .h_text{width:125px;height:32px;border:0;background:#323744;
+				font-size:14px;font-family:"微软雅黑";color:#fff;line-height:32px;padding-left:10px;float:left;}
+			.header .h_top .h_search .h_btn{width:20px;height:20px;display:block;float:left;margin-top:5px;background:url("./img/pe_icon.png") no-repeat -368px 0;}
+			/*end h_search*/
+
+			/*h_message start*/
+			.header .h_top .h_message{width:112px;height:70px;float:left;margin-left:34px;}
+			.header .h_top .h_message .h_info{width:52px;height:70px;float:left;position:relative;}
+			.header .h_top .h_message .h_info:hover{background:#323744;}
+			.header .h_top .h_message .h_info a{width:22px;height:16px;display:block;background:url("./img/pe_icon.png") no-repeat -368px -23px;margin: 26px auto;}
+			.header .h_top .h_message .h_info i{width:7px;height:7px;display:block;background:#eb6b83;border-radius:4px;border:1px solid #FFF;position:absolute;top:17px;left:34px;}
+
+			.header .h_top .h_message .h_pic{width:60px;height:70px;float:left;}
+			.header .h_top .h_message .h_pic:hover{background:#323744;}
+			.header .h_top .h_message .h_pic a{display:block;width:30px;height:30px;margin: 20px auto;}
+			.header .h_top .h_message .h_pic a img{border-radius:15px;}
+			/*end h_message*/
+			
+			/*banner start*/
+			.banner{width:100%;height:300px;}/*no-repeat top center;*/
+			.banner .b_bg{height: 300px;background-color: #00FFFF;}
+			.banner .b_bg .b_con{width:1200px;height:300px;margin:0 auto;}
+			.banner .b_bg .b_con .b_focus{width:760px;height:300px;margin:0 auto;overflow:hidden;position:relative;}
+			.banner .b_bg .b_con .b_focus ul li{list-style:none;}
+			
+			/*b_btn start*/
+			.banner .b_bg .b_con .b_focus .b_btn{width:136px;height:24px;position:absolute;bottom:10px;left:330px;}
+			.banner .b_bg .b_con .b_focus .b_btn ul{background:#000;display:inline-block;padding: 7px 28px;border-radius:12px;opacity:0.4;filter:alpha(opacity=40);}
+
+			.banner .b_bg .b_con .b_focus .b_btn ul li{border:1px solid red;list-style:none;float:left;width:8px;height:8px;border:1px solid #fff;margin:0 3px;border-radius:4px;cursor: pointer;}
+			.no{background:#fff;}
+			/*end b_btn*/
+
+			/*b_ear start*/
+			.banner .b_bg .b_con .b_focus .b_ear{width:46px;height:70px;display:block;position:absolute;top:115px;background:url("./img/icon.png") no-repeat;display:none;}
+
+			.banner .b_bg .b_con .b_focus .pre{left:0;background-position:-73px 0;}
+			.banner .b_bg .b_con .b_focus .pre:hover{background-position:-171px 0;}
+			.banner .b_bg .b_con .b_focus .next{left:713px;background-position:-124px 0;}
+			.banner .b_bg .b_con .b_focus .next:hover{background-position:-1px -57px;}
+			.banner .b_bg .b_con .b_focus:hover .b_ear{display:block;}
+			/*end b_ear*/
+
+			/*end banner*/
+			
+			/*menu start*/
+			.menu{width:100%;height:110px;border-bottom:1px solid #d9dce1;}
+			.menu .m_con{width:1180px;height:110px;margin:0 auto;}
+			.menu .m_con .m_list{width:215px;height:80px;border-right:1px solid #d9dce1;margin-top:12px;margin-left:20px;float:left;}
+			.menu .m_con .m_list h2{font-size:18px;color:#5580fb;font-weight:500;line-height:36px;}
+			.menu .m_con .m_list ul li{list-style:none;float:left;margin-right:10px;line-height:22px;}
+			.menu .m_con .m_list ul li a{color:#333;text-decoration:none;}
+			.menu .m_con .m_list ul li a:hover{color:#5580fb;}
+			.menu .m_con .m_list_end{border:0;}
+			/*end menu*/
+
+
+			/*hend start*/
+
+			.hend{width:100%;height:70px;background:#15171f;}
+			.hend .h_end{width:424px;height:70px;margin:0 auto;}
+			.hend .h_end .e_end{width:650px;height:70px;float:left;color:#fff;list-style:none;}
+			.hend .h_end .e_end ul li{list-style:none;float:left;}
+			.hend .h_end .e_end ul li a{text-decoration:none;display:block;line-height:70px;padding: 0 20px 0 20px;
+				color:#fff;font-size:14px;margin:0 5px 0 5px;}
+			.hend .h_end .e_end ul li a:hover{background:#323744;}
+			.hend .e_me{text-align: center;background:#15171f;}
+			/*end hend*/
+	    </style>
+	</head>
+<body>
+
+
+	<!--header start-->
+	<div class="header">
+		<div class="h_top">
+			<!--h_logo start-->
+			<div class="h_logo">
+				<a href="#"><img src="./img/logo.png" alt="咱厝人" width="145" height="33"/></a>
+			</div>
+			<!--end h_logo-->
+			
+			<!--h_nav start-->
+			<div class="h_nav">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">地区</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">今日热点</a></li>
+					<li><a href="#">故事</a></li>
+				</ul>
+			</div>
+			<!--end h_nav-->
+
+			
+
+			<!--h_search start-->
+			<div class="h_search">
+				<input type="text" class="h_text"/>
+				<a href="#" class="h_btn"></a>
+			</div>
+			<!--end h_search-->
+
+			<!--h_message start-->
+			<div class="h_message">
+				<div class="h_info">
+					<a href="#"></a>
+					<i></i>
+				</div>
+				<div class="h_pic">
+					<a href="#"><img src="./img/t1.jpg" alt="咱厝人" width="30" height="30" /></a>
+				</div>
+			</div>
+			<!--end h_message-->
+		</div>
+	
+	</div>
+	<!--end header-->	
+	
+
+	<!--banner start-->
+	<div class="banner">
+		<div class="b_bg">
+			<div class="b_con">
+				<!--b_focus start-->
+				<div class="b_focus">
+
+					<!--b_pic start-->
+					<ul id="b_pic">
+						<li>
+							<a href="#">
+								<img src="./img/banner-1.jpg" alt="咱厝人" width="1920" height="350"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/banner-1.jpg" alt="咱厝人" width="760" height="300"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/banner-1.jpg" alt="咱厝人" width="760" height="300"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/banner-1.jpg" alt="咱厝人" width="760" height="300"/>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./img/banner-1.jpg" alt="咱厝人" width="760" height="300"/>
+							</a>
+						</li>
+					</ul>
+					<!--end b_pic-->
+
+					<!--b_btn start-->
+					<div class="b_btn">
+						<ul id="b_btn_mini">
+							<li data-color="#4E4D9B" class="no"></li>
+							<li data-color="#A136D2"></li>
+							<li data-color="#6766CE"></li>
+							<li data-color="#563481"></li>
+							<li data-color="#009DE4"></li>
+						</ul>
+					</div>
+					<!--end b_btn-->
+
+					<!--b_ear start-->
+					<a href="#" class="b_ear pre"></a>
+					<a href="#" class="b_ear next"></a>
+					<!--end b_ear-->
+
+				</div>
+				<!--end b_focus-->
+			</div>
+		</div>
+	</div>
+	<!--end banner-->	
+
+	<!--menu start-->
+	<div class="menu">
+		<div class="m_con">
+
+			<div class="m_list">
+				<h2>别名</h2>
+				<ul>
+					<li><a href="#">闽</a></li>
+					<li><a href="#">八闽</a></li>
+					<li><a href="#">八闽大地</a></li>
+					<li><a href="#">海西</a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+
+			<div class="m_list">
+				<h2>下辖地区</h2>
+				<ul>
+					<li><a href="#">福州市</a></li>
+					<li><a href="#">厦门市</a></li>
+					<li><a href="#">莆田市</a></li>
+					<li><a href="#">三明市</a></li>
+					<li><a href="#">泉州市</a></li>
+					<li><a href="#">漳州市</a></li>
+					<li><a href="#">南平市</a></li>
+					<li><a href="#">龙岩市</a></li>
+					<li><a href="#">宁德市</a></li>
+				</ul>
+			</div>
+
+			<div class="m_list">
+				<h2>方言</h2>
+				<ul>
+					<li><a href="#">闽南语</a></li>
+					<li><a href="#">闽东语</a></li>
+					<li><a href="#">闽北语</a></li>
+					<li><a href="#">闽中语</a></li>
+					<li><a href="#">莆田话</a></li>
+					<li><a href="#">客家语</a></
+					<li><a href="#">赣语</a></li>
+					<li><a href="#">吴语</a></li>
+					<li><a href="#">更多</a></li>
+
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>著名景点</h2>
+				<ul>
+					<li><a href="#">鼓浪屿</a></li>
+					<li><a href="#">武夷山</a></li>
+					<li><a href="#">三坊七巷</a></li>
+					<li><a href="#">泰宁</a></li>
+					<li><a href="#">土楼</a></li>
+					<li><a href="#">白水洋</a></li>
+					<li><a href="#">太姥山</a></li>
+					<li><a href="#">清源山</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list m_list_end">
+				<h2>机场</h2>
+				<ul>
+					<li><a href="#">福州长乐国际机场</a></li>
+					<li><a href="#">厦门高崎国际机场</a></li>
+					<li><a href="#">泉州晋江国际机场</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+
+		</div>
+	
+	</div>
+	<!--end menu-->
+
+
+    <!--menu start-->
+	<div class="menu">
+		<div class="m_con">
+
+			<div class="m_list">
+				<h2>火车站</h2>
+				<ul>
+					<li><a href="#">福州站</a></li>
+					<li><a href="#">厦门北站</a></li>
+					<li><a href="#">泉州站</a></li>
+					<li><a href="#">漳州站</a></li>
+					<li><a href="#">莆田站</a></li>
+					<li><a href="#">福州北站</a></li>
+					<li><a href="#">惠安站</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+
+			<div class="m_list">
+				<h2>高等院校</h2>
+				<ul>
+					<li><a href="#">厦门大学</a></li>
+					<li><a href="#">福州大学</a></li>
+					<li><a href="#">华侨大学</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>三大中心城市</h2>
+				<ul>
+					<li><a href="#">福州</a></li>
+					<li><a href="#">厦门</a></li>
+					<li><a href="#">泉州</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>著名历史人物</h2>
+				<ul>
+					<li><a href="#">闽越王无诸</a></li>
+					<li><a href="#">闽王王审知</a></li>
+					<li><a href="#">晋江王留从效</a></li>
+					<li><a href="#">延平王郑成功</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list m_list_end">
+				<h2>政治</h2>
+				<ul>
+
+
+					<li><a href="#">省长：唐登杰</a></li>
+					<li><a href="#">副省长：张志南</a></li>
+					<li><a href="#">秘书长：黄新銮 </a></li>
+				</ul>
+			</div>
+
+		</div>
+	
+	</div>
+	<!--end menu-->
+
+<!--menu start-->
+	<div class="menu">
+		<div class="m_con">
+
+			<div class="m_list">
+				<h2>福州特产</h2>
+				<ul>
+					<li><a href="#">寿山石</a></li>
+					<li><a href="#">牛角梳</a></li>
+					<li><a href="#">橄榄</a></li>
+					<li><a href="#">福桔</a></li>
+					<li><a href="#">龙眼</a></li>
+					<li><a href="#">闽姜</a></li>
+					<li><a href="#">芙蓉李</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+
+			<div class="m_list">
+				<h2>莆田特产</h2>
+				<ul>
+					<li><a href="#">鳗鱼</a></li>
+					<li><a href="#">对虾</a></li>
+					<li><a href="#">梭子蟹</a></li>
+					<li><a href="#">丁昌鱼</a></li>
+					<li><a href="#">龙眼</a></li>
+					<li><a href="#">荔枝</a></li>
+					<li><a href="#">枇杷</a></li>
+					<li><a href="#">文旦柚</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>漳州特产</h2>
+				<ul>
+					<li><a href="#">水仙花</a></li>
+					<li><a href="#">茶花</a></li>
+					<li><a href="#">兰花</a></li>
+					<li><a href="#">青梅</a></li>
+					<li><a href="#">芦柑</a></li>
+					<li><a href="#">荔枝</a></li>
+					<li><a href="#">天宝香蕉</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>龙岩特产</h2>
+				<ul>
+					<li><a href="#">连城地瓜干</a></li>
+					<li><a href="#">连城白鹜鸭</a></li>
+					<li><a href="#">河田鸡</a></li>
+					<li><a href="#">武平猪胆干</a></li>
+					<li><a href="#">长汀豆腐干</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list m_list_end">
+				<h2>泉州特产</h2>
+				<ul>
+					<li><a href="#">惠安石雕</a></li>
+					<li><a href="#">泉州木偶头</a></li>
+					<li><a href="#">德化瓷器</a></li>
+					<li><a href="#">安溪铁观音</a></li>
+					<li><a href="#">永春老醋</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+
+		</div>
+	
+	</div>
+	<!--end menu-->
+
+
+<!--menu start-3-->
+	<div class="menu">
+		<div class="m_con">
+
+			<div class="m_list">
+				<h2>厦门特产</h2>
+				<ul>
+					<li><a href="#">馅饼</a></li>
+					<li><a href="#">鱼皮花生</a></li>
+					<li><a href="#">菩提丸</a></li>
+					<li><a href="#">青津果</a></li>
+					<li><a href="#">厦门珠绣</a></li>
+					<li><a href="#">漆线雕</a></li>
+					<li><a href="#">香菇肉酱</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+
+			<div class="m_list">
+				<h2>南平特产</h2>
+				<ul>
+					<li><a href="#">武夷岩茶（大红袍）</a></li>
+					<li><a href="#">竹笋</a></li>
+					<li><a href="#">香菇</a></li>
+					<li><a href="#">莲子</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>宁德特产</h2>
+				<ul>
+					<li><a href="#">食用菌</a></li>
+					<li><a href="#">四季柚</a></li>
+					<li><a href="#">槟榔芋</a></li>
+					<li><a href="#">大黄鱼</a></li>
+					<li><a href="#">石斑鱼</a></li>
+					<li><a href="#">对虾</a></li>
+					<li><a href="#">剑蛏</a></li>
+					<li><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="m_list">
+				<h2>简称由来</h2>
+				<ul>
+					<li><a href="#">闽东</a></li>
+					<li><a href="#">闽中</a></li>
+					<li><a href="#">闽南</a></li>
+					<li><a href="#">闽北</a></li>
+					<li><a href="#">闽西</a></li>
+				</ul>
+			</div>
+			<div class="m_list m_list_end">
+				<h2>关注我们</h2>
+				<ul>
+					<li><a href="#">邮箱</a></li>
+					<li><a href="#">QQ</a></li>
+					<li><a href="#">微信公众号</a></li>
+					<li><a href="#">联系电话</a></li>
+				</ul>
+			</div>
+
+		</div>
+	
+	</div>
+	<!--end menu-->
+
+<div class="hend">
+	<div class="h_end">
+		<div class="e_end">
+				<ul>
+					<li><a href="#">关于网站</a></li>
+					<li><a href="#">留言建议</a></li>
+					<li><a href="#">侵权删除</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+		</div>
+		
+	</div>
+	<div class="e_me">
+			Copyright © 2019 信工数媒3班-王泽威
+		</div>
+</div>
+
+
+<script type="text/javascript">
+
+	/*
+	*19数媒3班-王泽威
+	*/
+	$(function(){
+		
+		var index = 0;
+		//轮展图切换 
+		$("#b_btn_mini").find("li").mouseover(function(){
+			// 控制小按钮选中
+			$(this).addClass("no").siblings().removeClass("no");
+			// 联动（图片和小按钮）
+			var _index = $(this).index();
+			index = _index;
+			$("#b_pic").find("li").eq(_index).fadeIn("slow").siblings().hide();
+			// 获取选中背景颜色，切换
+			var background = $(this).data("color");
+			$(this).parents(".b_bg").css("background",background);
+		});
+		
+		// 点击下一页
+		$(".next").click(function(){
+			index++;
+			var length = $("#b_pic").find("li").length;
+			if(index >= length){
+				index = 0;
+			}
+			// 联动背景颜色
+			var background = $(".b_btn").find("li").eq(index).data("color");
+			$(this).parents(".b_bg").css("background",background);
+			// 联动小按钮
+			$("#b_btn_mini").find("li").eq(index).addClass("no").siblings().removeClass("no");
+			// 联动图片
+			$("#b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+		});
+
+		// 点击上一页
+		$(".pre").click(function(){
+			index--;
+			var length = $("#b_pic").find("li").length;
+			if(index < 0){
+				index = length - 1;
+			}
+			// 联动背景颜色
+			var background = $(".b_btn").find("li").eq(index).data("color");
+			$(this).parents(".b_bg").css("background",background);
+			// 联动小按钮
+			$("#b_btn_mini").find("li").eq(index).addClass("no").siblings().removeClass("no");
+			// 联动图片
+			$("#b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+		});
+
+		// 自动切换
+		setInterval(function(){
+			index++;
+			var length = $("#b_pic").find("li").length;
+			if(index >= length){
+				index = 0;
+			}
+			// 联动背景颜色
+			var background = $(".b_btn").find("li").eq(index).data("color");
+			$(".b_bg").css("background",background);
+			// 联动小按钮
+			$("#b_btn_mini").find("li").eq(index).addClass("no").siblings().removeClass("no");
+			// 联动图片
+			$("#b_pic").find("li").eq(index).fadeIn("slow").siblings().hide();
+		},3000);
+
+
+
+	});
+
+</script>
+
+
+
+</body>
+</html>
